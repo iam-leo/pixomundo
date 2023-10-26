@@ -1,1 +1,21 @@
-<p>search-img works!</p>
+<div class="flex items-center justify-center w-full sm:w-[600px] lg:w-[800px] 2xl:w-[1280px] px-5 py-8 rounded-lg mx-auto my-10 bg-spring-green-950 border-[1px] border-spring-green-600">
+    <form 
+        class="flex flex-col items-center justify-center sm:flex-row gap-y-5 sm:gap-x-7"
+        (ngSubmit)="searchImgs()"
+    >
+        <div>
+            <input 
+                type="text"
+                name="img"
+                class="px-3 py-2 text-xl text-center rounded-md w-96 font-montserrat"
+                placeholder="Search images..."
+                [(ngModel)]="nameImage"
+            >
+        </div>
+        <div>
+            <button type="submit" class="w-40 p-2 tracking-wider text-white rounded-md border-[1px] border-spring-green-600 uppercase">
+                Search
+            </button>
+        </div>
+    </form>
+</div>
