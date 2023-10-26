@@ -4,6 +4,10 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
+    fontFamily: {
+      'varela-round': ['Varela Round', 'sans-serif'],
+      'montserrat': ['Montserrat', 'sans-serif'],
+    },
     extend: {
       colors: {
         'spring-green': {
