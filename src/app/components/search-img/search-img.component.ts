@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ImageService } from 'src/app/services/image.service';
 
 @Component({
   selector: 'app-search-img',
@@ -8,11 +9,14 @@ import { Component } from '@angular/core';
 export class SearchImgComponent {
   nameImage: string;
 
-  constructor(){
+  constructor( private _imageService: ImageService){
     this.nameImage = '';
   }
 
   searchImgs(){
-    console.log(this.nameImage);
+    // Validation search input
+    if(this.nameImage === ''){
+      this._imageService.setError('Add a search term!')
+    }
   }
 }
