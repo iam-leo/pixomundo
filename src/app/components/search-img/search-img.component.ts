@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ImageService } from 'src/app/services/image.service';
+import { environment } from 'src/environments/environment.dev';
 
 @Component({
   selector: 'app-search-img',

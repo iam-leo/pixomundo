@@ -13,6 +13,13 @@ export class ListarImgComponent {
   
   constructor( private _imageSevice: ImageService) {
     this.suscription = this._imageSevice.getTermSearch().subscribe( data => {
+      this.term = data;
+      this.getImages();
+    })
+  }
+
+  getImages(){
+    this._imageSevice.getImages(this.term).subscribe( data => {
       console.log(data)
     })
   }
