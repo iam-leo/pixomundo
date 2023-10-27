@@ -1,1 +1,34 @@
-<p>listar-img works!</p>
+<div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    <div 
+        class="w-full max-w-md mx-auto rounded-lg shadow bg-spring-green-950 border-[1px] border-spring-green-600"
+        *ngFor="let img of listImages"
+    >
+        <div class="relative w-full px-5 pt-5">
+            <img class="object-cover w-full rounded-lg max-h-60" [src]="img.previewURL" [alt]="img.tags" />
+            <div class="absolute flex items-center px-2 py-1 rounded-md gap-x-2 bottom-2 right-7 bg-spring-green-600/50">
+                <img class="object-fill w-8 h-8 rounded-full" [src]="img.userImageURL"  [alt]="'Autor:' + img.user ">
+                <p class="text-xl font-bold text-white font-montserrat">{{img.user}}</p>
+            </div>
+        </div>
+        <div class="px-5 pb-5">
+            <div class="flex flex-col mt-2.5">
+                <p class="flex text-xl text-white font-montserrat gap-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 26 26"><path fill="#ffffff" d="M17.869 3.889c-2.096 0-3.887 1.494-4.871 2.524c-.984-1.03-2.771-2.524-4.866-2.524C4.521 3.889 2 6.406 2 10.009c0 3.97 3.131 6.536 6.16 9.018c1.43 1.173 2.91 2.385 4.045 3.729c.191.225.471.355.765.355h.058c.295 0 .574-.131.764-.355c1.137-1.344 2.616-2.557 4.047-3.729C20.867 16.546 24 13.98 24 10.009c0-3.603-2.521-6.12-6.131-6.12z"/></svg>
+                    {{ img.likes }}
+                </p>
+                <p class="flex text-xl text-white font-montserrat gap-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><path fill="#ffffff" d="M247.31 124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57 61.26 162.88 48 128 48S61.43 61.26 36.34 86.35C17.51 105.18 9 124 8.69 124.76a8 8 0 0 0 0 6.5c.35.79 8.82 19.57 27.65 38.4C61.43 194.74 93.12 208 128 208s66.57-13.26 91.66-38.34c18.83-18.83 27.3-37.61 27.65-38.4a8 8 0 0 0 0-6.5ZM128 192c-30.78 0-57.67-11.19-79.93-33.25A133.47 133.47 0 0 1 25 128a133.33 133.33 0 0 1 23.07-30.75C70.33 75.19 97.22 64 128 64s57.67 11.19 79.93 33.25A133.46 133.46 0 0 1 231.05 128c-7.21 13.46-38.62 64-103.05 64Zm0-112a48 48 0 1 0 48 48a48.05 48.05 0 0 0-48-48Zm0 80a32 32 0 1 1 32-32a32 32 0 0 1-32 32Z"/></svg>
+                    {{ img.views }}
+                </p>
+                <p class="flex text-xl text-white font-montserrat gap-x-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#ffffff" d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11l-5 5Zm-6 4q-.825 0-1.413-.588T4 18v-3h2v3h12v-3h2v3q0 .825-.588 1.413T18 20H6Z"/></svg>
+                    {{ img.downloads }}
+                </p>
+            </div>
+            <div class="flex items-center justify-between">
+                <span class="px-4 text-2xl text-white rounded-full font-montserrat bg-spring-green-900">{{ img.type }}</span>
+                <a [href]="img.largeImageURL" target="_blank" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 font-montserrat font-bold">View image</a>
+            </div>
+        </div>
+    </div>
+</div>

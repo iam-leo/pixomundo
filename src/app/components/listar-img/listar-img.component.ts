@@ -10,6 +10,7 @@ import { ImageService } from 'src/app/services/image.service';
 export class ListarImgComponent {
   term = '';
   suscription: Subscription;
+  listImages: any[] = [];
   
   constructor( private _imageSevice: ImageService) {
     this.suscription = this._imageSevice.getTermSearch().subscribe( data => {
@@ -25,6 +26,8 @@ export class ListarImgComponent {
         if(data.hits.length === 0){
           this._imageSevice.setError('Ops... Images not found!');
         }
+
+        this.listImages = data.hits
       }, error: error => {
         // Error server
         this._imageSevice.setError('Ops... An error ocurred!');
