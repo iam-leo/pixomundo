@@ -39,13 +39,19 @@
 
 <div *ngIf="listImages.length > 0" class="flex justify-center w-full py-10">
     <!-- Previous Button -->
-    <a href="#" class="flex items-center justify-center h-10 px-4 mr-3 text-base font-medium border rounded-lg w-36 text-spring-green-200 border-spring-green-600 bg-spring-green-950 hover:bg-spring-green-900 hover:text-spring-green-500">
+    <a (click)="previousPage()" 
+        ngClass="{{currentPage === 1 ? 'hidden' : ''}}"
+        class="flex items-center justify-center h-10 px-4 mr-3 text-base font-medium border rounded-lg cursor-pointer w-36 text-spring-green-200 border-spring-green-600 bg-spring-green-950 hover:bg-spring-green-900 hover:text-spring-green-500"
+    >
       <svg class="w-3.5 h-3.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5H1m0 0 4 4M1 5l4-4"/>
       </svg>
       Previous
     </a>
-    <a href="#" class="flex items-center justify-center h-10 px-4 mr-3 text-base font-medium border rounded-lg w-36 text-spring-green-200 border-spring-green-600 bg-spring-green-950 hover:bg-spring-green-900 hover:text-spring-green-500">
+    <a (click)="nextPage()" 
+        ngClass="{{currentPage === totalPages ? 'hidden' : ''}}" 
+        class="flex items-center justify-center h-10 px-4 mr-3 text-base font-medium border rounded-lg cursor-pointer w-36 text-spring-green-200 border-spring-green-600 bg-spring-green-950 hover:bg-spring-green-900 hover:text-spring-green-500"
+    >
       Next
       <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>

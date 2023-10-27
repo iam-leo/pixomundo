@@ -28,8 +28,8 @@ export class ImageService {
     return this.termSearch$.asObservable();
   }
 
-  getImages(term: string): Observable<any> {
-    const URL = environment.API_URL + environment.PIXABAY_API_KEY + '&q=' + term
+  getImages(term: string, imgPerPage: number, currentPage: number): Observable<any> {
+    const URL = environment.API_URL + environment.PIXABAY_API_KEY + '&q=' + term + '&per_page=' + imgPerPage + '&page=' + currentPage
     return this.http.get(URL);
   }
 }
