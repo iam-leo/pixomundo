@@ -1,4 +1,8 @@
-<div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<div class="flex justify-center w-full">
+    <app-spinner *ngIf="loading"></app-spinner>
+</div>
+
+<div *ngIf="!loading" class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
     <div 
         class="w-full max-w-md mx-auto rounded-lg shadow bg-spring-green-950 border-[1px] border-spring-green-600"
         *ngFor="let img of listImages"

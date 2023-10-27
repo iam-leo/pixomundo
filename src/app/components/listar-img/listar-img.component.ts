@@ -11,18 +11,22 @@ export class ListarImgComponent {
   term = '';
   suscription: Subscription;
   listImages: any[] = [];
+  loading = false;
   
   constructor( private _imageSevice: ImageService) {
     this.suscription = this._imageSevice.getTermSearch().subscribe( data => {
+      this.loading = true;
       this.term = data;
-      this.getImages();
+      setTimeout(() => {
+        this.getImages();        
+      }, 2500);
     })
   }
 
   getImages(){
     this._imageSevice.getImages(this.term).subscribe({
       next: data => {
-        console.log(data)
+        this.loading = false;
         if(data.hits.length === 0){
           this._imageSevice.setError('Ops... Images not found!');
         }
@@ -31,6 +35,7 @@ export class ListarImgComponent {
       }, error: error => {
         // Error server
         this._imageSevice.setError('Ops... An error ocurred!');
+        this.loading = false;
       }
     })
   }
