@@ -19,8 +19,16 @@ export class ListarImgComponent {
   }
 
   getImages(){
-    this._imageSevice.getImages(this.term).subscribe( data => {
-      console.log(data)
+    this._imageSevice.getImages(this.term).subscribe({
+      next: data => {
+        console.log(data)
+        if(data.hits.length === 0){
+          this._imageSevice.setError('Ops... Images not found!');
+        }
+      }, error: error => {
+        // Error server
+        this._imageSevice.setError('Ops... An error ocurred!');
+      }
     })
   }
 }
