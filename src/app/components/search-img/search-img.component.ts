@@ -16,7 +16,10 @@ export class SearchImgComponent {
   searchImgs(){
     // Validation search input
     if(this.nameImage === ''){
-      this._imageService.setError('Add a search term!')
+      this._imageService.setError('Add a search term!');
+      return
     }
+
+    this._imageService.sendTermSearch(this.nameImage);
   }
 }
