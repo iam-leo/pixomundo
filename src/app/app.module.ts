@@ -10,6 +10,7 @@ import { ListarImgComponent } from './components/listar-img/listar-img.component
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ErrorComponent } from './shared/error/error.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     ListarImgComponent,
     NavbarComponent,
     ErrorComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
