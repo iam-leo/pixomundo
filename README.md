@@ -1,27 +1,23 @@
-# SearchImgs
+# 🔗 PixoMundo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+## 🖼 Descripción:
+PixoMundo es tu aplicación para encontrar imágenes libres de derechos de forma rápida y sencilla. Explora una amplia biblioteca, utiliza funciones de búsqueda avanzada y descarga sin restricciones legales. Organiza tus descargas y accede a recursos visuales de alta calidad para potenciar tus proyectos de manera eficiente.
 
-## Development server
+<div align="center">
+    <img src="https://github.com/iam-leo/ShortCat/assets/79548542/69ef8b60-4b57-440f-a32c-366c1d4580ac">
+</div>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🖼 Cómo utilizar
+1. Simplemente visita **[PixoMundo](https://pixomundo.netlify.app/)**.
 
-## Code scaffolding
+2. Ingresa un termino de búsqueada, por ej: cat.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. Dale click/tap al botón ` SEARCH `
 
-## Build
+4. Espera unos segundos y listo ¡Ya tienes los resultados de tú búsqueda!
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+5. Dale click/tap al botón ` VIEW ` de la imagen que quieras para visualizar en HD.
 
-## Running unit tests
+## 🖼 Tecnologías utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[![project teach](https://skillicons.dev/icons?i=angular,tailwind,typescript)](https://skillicons.dev)
